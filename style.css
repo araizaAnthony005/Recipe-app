@@ -168,6 +168,23 @@ body[data-theme="dark"] .recipe-card a {
   color: var(--text);
 }
 
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--accent-color, #0077ff);
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 2px solid var(--accent-color, #0077ff);
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.back-btn:hover {
+  background: var(--accent-color, #0077ff);
+  color: #fff;
+}
+
 @media (max-width: 600px) {
   form {
     flex-direction: column;
@@ -219,4 +236,11 @@ a:active {
   transform: scale(0.96);
   opacity: 0.85;
   transition: transform 0.1s ease;
+}
+@media (max-width: 600px) {
+  .back-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }

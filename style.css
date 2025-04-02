@@ -168,14 +168,55 @@ body[data-theme="dark"] .recipe-card a {
   color: var(--text);
 }
 
-/* Mobile */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   form {
     flex-direction: column;
+    gap: 12px;
   }
 
   input[type="text"],
   button {
     width: 100%;
+    font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 8px;
   }
+
+  #random-btn {
+    width: 100%;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .recipe-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .recipe-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .recipe-card ul {
+    font-size: 1rem;
+  }
+
+  .theme-toggle {
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+}
+
+button:active,
+a:active {
+  transform: scale(0.96);
+  opacity: 0.85;
+  transition: transform 0.1s ease;
 }

@@ -23,6 +23,38 @@ body {
   align-items: center;
 }
 
+/* Final Back Button */
+.back-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  color: var(--accent-color);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1.5px solid var(--accent-color);
+  border-radius: 6px;
+  background: transparent;
+  max-width: 95vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 999;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.back-btn:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+
 h1 {
   margin-bottom: 20px;
   text-align: center;
@@ -99,24 +131,6 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Back to Portfolio Button */
-.back-btn {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: var(--accent-color);
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 2px solid var(--accent-color);
-  border-radius: 8px;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.back-btn:hover {
-  background: var(--accent-color);
-  color: #fff;
-}
-
 /* Mobile Polish */
 @media (max-width: 600px) {
   form {
@@ -143,12 +157,6 @@ button:hover {
   .recipe-card ul {
     font-size: 1rem;
   }
-
-  .back-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
 }
 
 button:active,
@@ -156,31 +164,4 @@ a:active {
   transform: scale(0.96);
   opacity: 0.9;
   transition: transform 0.1s ease;
-}
-.back-btn {
-  display: block;
-  margin: 0 auto 20px auto;
-  text-align: center;
-  width: fit-content;
-  font-size: 1rem;
-  color: var(--accent-color, #0077ff);
-  text-decoration: none;
-  padding: 10px 16px;
-  border: 2px solid var(--accent-color, #0077ff);
-  border-radius: 8px;
-  background: transparent;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.back-btn:hover {
-  background: var(--accent-color, #0077ff);
-  color: white;
-}
-
-@media (max-width: 600px) {
-  .back-btn {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 16px;
-  }
 }
